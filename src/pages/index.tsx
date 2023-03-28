@@ -3,6 +3,8 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from 'next/image'
 
+import { LoadingPage } from "@/components/loading";
+
 import { api, RouterOutputs } from "@/utils/api";
 import { SignInButton, useUser } from "@clerk/nextjs";
 
@@ -53,13 +55,29 @@ const PostView = (props: PostWithUser) => {
   );
 };
 
+const Feed = () => {
+  const { data, isLoading: postsLoading } = api.posts.getAll.useQuery();
+  
+  if (postsLoading) return <LoadingPage />;
+
+  if (!data) return <div className="h-screen flex justify-center items-center">Something went wrong!</div>;
+  
+  return (
+    <div className="flex flex-col">
+      {[...data, ...data]?.map((fullPost) => (
+        <PostView {...fullPost} key={fullPost.post.id} />
+      ))}
+    </div>
+  );
+};
+
 const Home: NextPage = () => {
-  const user = useUser();
+  const { isLoaded: userLoaded, isSignedIn } = useUser();
+  // fetch asap
+  api.posts.getAll.useQuery(); 
 
-  const { data, isLoading } = api.posts.getAll.useQuery(); 
-
-  if (isLoading ) return <div className="flex justify-center items-center h-screen">Loading...</div>;
-  if (!data) return <div className="flex justify-center items-center h-screen">Something went wrong!</div>;
+  // empty div if user isn't loaded ¯\_(ツ)_/¯
+  if (!userLoaded) return <div />;
 
   return (
     <>
@@ -70,17 +88,14 @@ const Home: NextPage = () => {
       </Head>
       <main className="flex justify-center h-screen mt-8">
         <div className="h-full w-full md:max-w-3xl">
-          <div className="p-4 flex">
-            {!user.isSignedIn && (
+          <div className="p-4 px-0 flex">
+            {!isSignedIn && (
             <div className=""><SignInButton /></div>
             )}
-            {user.isSignedIn && <CreatePostWizard />}
+            {isSignedIn && <CreatePostWizard />}
           </div>
-          <div className="px-4 flex flex-col">
-              {[...data, ...data]?.map((fullPost) => (
-                <PostView {...fullPost} key={fullPost.post.id} />
-              ))}
-          </div>
+
+          <Feed />
         </div>
       </main>
     </>
