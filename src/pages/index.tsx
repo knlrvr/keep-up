@@ -1,6 +1,7 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import Image from 'next/image'
+import Link from "next/link";
 
 import { LoadingPage, LoadingSpinner } from "@/components/loading";
 
@@ -89,9 +90,17 @@ const PostView = (props: PostWithUser) => {
       />
       <div className="flex flex-col">
         <div className="flex text-gray-500 text-sm">
-          <span className="font-semibold">@{author.username}</span>
+          <Link href={`/${author.username}`}
+            className="hover:text-gray-300">
+            <span className="font-semibold">@{author.username}</span>
+          </Link>
           &nbsp; · &nbsp; 
-          <span className="font-thin">{`${dayjs(post.createdAt).fromNow()}`}</span>
+          <Link href={`/post/${post.id}`}
+            className="hover:underline hover:underline-offset-4 hover:text-gray-300">
+            <span className="font-thin">
+              {`${dayjs(post.createdAt).fromNow()}`}
+            </span>
+          </Link>
         </div>
         <span className="text-xl">{post.content}</span>
       </div>
