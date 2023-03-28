@@ -10,11 +10,25 @@ import { SignInButton, useUser } from "@clerk/nextjs";
 
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime'
+import { useState } from "react";
 
 dayjs.extend(relativeTime);
 
 const CreatePostWizard = () => {
   const { user } = useUser();
+  const [input, setInput] = useState("");
+  
+  const ctx = api.useContext();
+
+  const { mutate, isLoading: isPosting } = api.posts.create.useMutation({
+    onSuccess: () => {
+      setInput('');
+      void ctx.posts.getAll.invalidate();
+
+    },
+  }); 
+  
+
   console.log(user);
 
   if (!user) return null;
@@ -28,7 +42,12 @@ const CreatePostWizard = () => {
       <input 
         className="bg-transparent px-1 rounded-full w-full grow outline-none"
         placeholder="Add a note here!"
+        type="text"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        disabled={isPosting}
       />
+      <button onClick={() => mutate({ content: input})}>Post</button>
     </div>
   )
 };
@@ -44,12 +63,12 @@ const PostView = (props: PostWithUser) => {
         className="w-12 h-12 rounded-full"
       />
       <div className="flex flex-col">
-        <div className="flex text-gray-500">
+        <div className="flex text-gray-500 text-sm">
           <span className="font-semibold">@{author.username}</span>
           &nbsp; · &nbsp; 
           <span className="font-thin">{`${dayjs(post.createdAt).fromNow()}`}</span>
         </div>
-        <span>{post.content}</span>
+        <span className="text-xl">{post.content}</span>
       </div>
     </div>
   );
@@ -64,7 +83,7 @@ const Feed = () => {
   
   return (
     <div className="flex flex-col">
-      {[...data, ...data]?.map((fullPost) => (
+      {data.map((fullPost) => (
         <PostView {...fullPost} key={fullPost.post.id} />
       ))}
     </div>
