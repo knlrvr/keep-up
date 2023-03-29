@@ -3,12 +3,15 @@ import type {
   NextPage 
 } from "next";
 import Head from "next/head";
+import Link from 'next/link';
 import { api } from "@/utils/api";
 import { PageLayout } from "@/components/layout";
 import Image from "next/image";
 import { LoadingPage } from "@/components/loading";
 import { PostView } from "@/components/postview";
 import { generateSSGHelper } from "@/server/helpers/ssgHelper";
+
+import { BsArrowLeft } from 'react-icons/bs'
 
 const ProfileFeed = (props: {userId: string}) => {
 
@@ -24,7 +27,6 @@ const ProfileFeed = (props: {userId: string}) => {
       ))}
     </div>
   )
-
 }
 
 const ProfilePage: NextPage<{ username: string }> = ({username}) => {
@@ -42,6 +44,10 @@ const ProfilePage: NextPage<{ username: string }> = ({username}) => {
       </Head>
       <PageLayout>
         <div className="bg-black h-36 relative">
+        <Link href="/">
+            <BsArrowLeft 
+              className="text-white text-3xl m-4 absolute hover:text-gray-300" />
+            </Link>
             <Image 
               src={data.profileImageUrl} 
               alt={`${data.username ?? ""}'s profile picture`} 

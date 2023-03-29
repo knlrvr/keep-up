@@ -12,7 +12,7 @@ import { useState } from "react";
 import { toast } from "react-hot-toast";
 import { PageLayout } from "@/components/layout";
 
-
+import Navbar from "@/components/navbar";
 
 const CreatePostWizard = () => {
   const { user } = useUser();
@@ -38,7 +38,7 @@ const CreatePostWizard = () => {
   if (!user) return null;
 
   return (
-    <div className="flex gap-4 w-full p-8 border-b">
+    <div className="flex gap-4 w-full py-8 px-4 border-b">
       <Image src={user.profileImageUrl} alt="pfp" 
         width="1000" height="0"
         className="w-12 h-12 rounded-full"
@@ -60,13 +60,14 @@ const CreatePostWizard = () => {
         disabled={isPosting}
       />
       {input !== "" && !isPosting && (
-      <button onClick={() => mutate({ content: input})}>
+      <button onClick={() => mutate({ content: input})}
+        className="px-6 rounded-full bg-blue-400 text-white hover:bg-blue-300 transition duration-300">
         Post
       </button>
       )}
 
       {isPosting && 
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center px-6 rounded-full bg-blue-400 text-white hover:bg-blue-300 transition duration-300">
           <span>Posting</span>
         </div>
       }
@@ -101,11 +102,9 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <Navbar />
       <PageLayout>
         <div className="">
-          {!isSignedIn && (
-            <div className=""><SignInButton /></div>
-          )}
           {
             isSignedIn && <CreatePostWizard />
           }
