@@ -9,11 +9,11 @@ import {
 const SignOutButton = () => {
     const { signOut } = useClerk();
     return (
-        <button onClick={() => signOut()} >
+        <button onClick={() => void signOut()} >
             Sign Out
         </button>
     )
-}
+};
 
 const Dropdown = () => {
   const [isExpanded, setIsExpanded] = useState(false)

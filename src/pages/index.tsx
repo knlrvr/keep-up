@@ -5,7 +5,7 @@ import { LoadingPage } from "@/components/loading";
 import { PostView } from "@/components/postview";
 
 import { api } from "@/utils/api";
-import { SignInButton, useUser } from "@clerk/nextjs";
+import { useUser } from "@clerk/nextjs";
 
 
 import { useState } from "react";
