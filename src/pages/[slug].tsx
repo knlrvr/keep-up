@@ -23,12 +23,10 @@ const ProfileFeed = (props: {userId: string}) => {
 
 }
 
-type PageProps = InferGetStaticPropsType<typeof getStaticProps>;
-
-const ProfilePage: NextPage<PageProps> = ({username}) => {
+const ProfilePage: NextPage<{ username: string }> = ({username}) => {
 
   const { data } = api.profile.getUserByUsername.useQuery({
-    username: username,
+    username,
   });
   if (!data) return <div className="h-screen flex justify-center items-center">404</div>;
 
