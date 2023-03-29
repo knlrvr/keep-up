@@ -6,8 +6,7 @@ const SinglePostPage: NextPage = () => {
     <>
       <Head>
         <title>NEXT.js NOTES</title>
-        <meta name="description" content="Leave a note!" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="" />
       </Head>
       <main className="flex justify-center h-screen mt-8">
         <div className="max-w-3xl">
@@ -18,4 +17,4 @@ const SinglePostPage: NextPage = () => {
   ); 
 };
 
-export default SinglePostPage;
+export default SinglePostPage; 

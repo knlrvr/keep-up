@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from 'next/image'
 import Link from "next/link";
 
-import { LoadingPage, LoadingSpinner } from "@/components/loading";
+import { LoadingPage } from "@/components/loading";
 
 import { api, RouterOutputs } from "@/utils/api";
 import { SignInButton, useUser } from "@clerk/nextjs";
@@ -12,6 +12,7 @@ import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime'
 import { useState } from "react";
 import { toast } from "react-hot-toast";
+import { PageLayout } from "@/components/layout";
 
 dayjs.extend(relativeTime);
 
@@ -35,9 +36,6 @@ const CreatePostWizard = () => {
       };
     }
   }); 
-  
-
-  console.log(user);
 
   if (!user) return null;
 
@@ -134,23 +132,18 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Head>
-        <title>NEXT.js NOTES</title>
-        <meta name="description" content="Leave a note!" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className="flex justify-center h-screen mt-8">
-        <div className="h-full w-full md:max-w-3xl">
-          <div className="p-4 px-0 flex">
-            {!isSignedIn && (
+      <PageLayout>
+        <div className="p-4">
+          {!isSignedIn && (
             <div className=""><SignInButton /></div>
-            )}
-            {isSignedIn && <CreatePostWizard />}
-          </div>
+          )}
+          {
+            isSignedIn && <CreatePostWizard />
+          }
 
           <Feed />
         </div>
-      </main>
+      </PageLayout>
     </>
   ); 
 };
