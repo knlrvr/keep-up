@@ -27,4 +27,4 @@ A full stack social media clone!
 4. Open `http://localhost:3000` in a browser to view the application
 
 ## Notes 
-> This is an ongoing project!
+> This is an ongoing project! If anyone comes across this, please post! 
