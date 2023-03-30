@@ -38,7 +38,7 @@ const CreatePostWizard = () => {
   if (!user) return null;
 
   return (
-    <div className="flex gap-4 w-full py-8 px-4 border-b">
+    <div className="flex gap-4 w-full py-8 px-4 border-b mt-36">
       <Image src={user.profileImageUrl} alt="pfp" 
         width="1000" height="0"
         className="w-12 h-12 rounded-full"
@@ -104,7 +104,7 @@ const Home: NextPage = () => {
     <>
       <Navbar />
       <PageLayout>
-        <div className="">
+        <div className="mt-32">
           {
             isSignedIn && <CreatePostWizard />
           }

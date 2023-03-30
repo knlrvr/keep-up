@@ -1,17 +1,29 @@
 import React from 'react'
 import { BsLock } from 'react-icons/bs'
+import { SignInButton, useUser } from '@clerk/nextjs'
 
 import Dropdown from './dropdown'
 
 const Navbar = () => {
+  const { isLoaded: userLoaded, isSignedIn } = useUser();
+
+  if (!userLoaded) return <div />;
+
   return (
-    <div className="max-w-xl mx-auto border-x border-b border-gray-200">
+    <div className="fixed top-0 inset-x-0 bg-white bg-opacity-95 max-w-xl mx-auto border-x border-b border-gray-200">
         <div className="flex justify-between pt-4 py-8 items-center">
             <div className="text-xl font-semibold p-2 px-4">
                 Home
             </div>
-            <div className="px-2">
-                <Dropdown />
+            <div className="px-2 flex items-center">
+              {!isSignedIn && ( 
+                <div className="mr-4 text-sm bg-blue-400 text-white px-4 py-1 rounded-full hover:bg-blue-300 transition duration-300">
+                  <SignInButton> 
+                      Sign In 
+                  </SignInButton>
+                </div>
+              )}
+              <Dropdown />
             </div>
         </div>
         <div className="p-2 flex justify-evenly items-start cursor-pointer">
@@ -21,10 +33,6 @@ const Navbar = () => {
           </div>
           <div className="flex items-center">
             <span className="hover:text-gray-500">Following</span>
-            <BsLock className="ml-1"/>
-          </div>
-          <div className="flex items-center">
-            <span className="hover:text-gray-500">Trending</span>
             <BsLock className="ml-1"/>
           </div>
           <div className="flex items-center">

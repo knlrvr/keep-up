@@ -16,7 +16,6 @@ const addUsersDataToPosts = async (posts: Post[]) => {
   const users = (
     await clerkClient.users.getUserList({
       userId: posts.map((post) => post.authorId),
-      limit: 100,
     })
   ).map(filterUserForClient);
 
@@ -39,7 +38,7 @@ const addUsersDataToPosts = async (posts: Post[]) => {
   })
 }
 
-// new ratelimiter, allows 1 request per 1 minute
+// ratelimiter, allows 1 request per 1 minute
 const ratelimit = new Ratelimit({
   redis: Redis.fromEnv(),
   limiter: Ratelimit.slidingWindow(1, "1 m"),
