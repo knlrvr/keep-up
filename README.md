@@ -1,28 +1,30 @@
-# Create T3 App
+<h2 align="center"> Next.js Notes </h2>
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+![unauth-home-notes](https://user-images.githubusercontent.com/91632194/228708825-544c8bbf-f7d1-4bb6-9b5f-9100ce71eae3.png)
 
-## What's next? How do I make an app with this?
+![auth-home-notes](https://user-images.githubusercontent.com/91632194/228708833-604396a0-7321-4c56-a66a-9d1600924544.png)
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+![profile-notes](https://user-images.githubusercontent.com/91632194/228708843-78d1269a-b521-4b9f-bdcb-c57d46394eb7.png)
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Description
+A full stack social media clone!
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+## View
+[View Live](https://next-notes-74lh.vercel.app/)
 
-## Learn More
+## Built With
+- [TypeScript](https://www.typescriptlang.org/)
+- [Next](https://nextjs.org/docs)
+- [Tailwind](https://tailwindcss.com/docs/installation)
+- [Prisma](https://www.prisma.io/)
+- [tRPC](https://trpc.io/docs/quickstart)
+- [Clerk](https://clerk.com/)
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+## Running This Project Yourself 
+1. Clone the project to your machine with `git clone https://github.com/knlrvr/next-notes.git`
+2. On a command line inside of the application's folder, run `npm install`
+3. Again, on a command line inside of the application's folder, run `npm start`
+4. Open `http://localhost:3000` in a browser to view the application
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+## Notes 
+> This is an ongoing project!
