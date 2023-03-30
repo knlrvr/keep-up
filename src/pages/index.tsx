@@ -38,7 +38,7 @@ const CreatePostWizard = () => {
   if (!user) return null;
 
   return (
-    <div className="flex gap-4 w-full py-8 px-4 border-b mt-36">
+    <div className="flex gap-4 w-full py-8 px-4 border-b mt-32">
       <Image src={user.profileImageUrl} alt="pfp" 
         width="1000" height="0"
         className="w-12 h-12 rounded-full"
@@ -59,7 +59,7 @@ const CreatePostWizard = () => {
         }}
         disabled={isPosting}
       />
-      {input !== "" && !isPosting && (
+      {!isPosting && (
       <button onClick={() => mutate({ content: input})}
         className="px-6 rounded-full bg-blue-400 text-white hover:bg-blue-300 transition duration-300">
         Post
@@ -104,7 +104,7 @@ const Home: NextPage = () => {
     <>
       <Navbar />
       <PageLayout>
-        <div className="mt-32">
+        <div className="mt-36">
           {
             isSignedIn && <CreatePostWizard />
           }
