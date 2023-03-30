@@ -2,8 +2,12 @@ import type {
   GetStaticProps, 
   NextPage 
 } from "next";
+import Link from 'next/link'
 import Head from "next/head";
 import { api } from "@/utils/api";
+import { PageLayout } from "@/components/layout";
+
+import { BsArrowLeft } from 'react-icons/bs'
 
 import { generateSSGHelper } from "@/server/helpers/ssgHelper";
 import { PostView } from "@/components/postview";
@@ -21,9 +25,15 @@ const SinglePostPage: NextPage<{ id: string }> = ({id}) => {
         <title>{`${data.post.content} - ${data.author.username}`}</title>
         <meta name="description" content="" />
       </Head>
-        <div className="h-screen flex justify-center items-center">
-          <PostView {...data} />
-        </div>
+          <PageLayout>
+            <Link href="/">
+              <BsArrowLeft 
+                className="text-black text-3xl m-4 absolute hover:text-gray-300" />
+            </Link>
+            <div className="h-screen flex justify-center">
+                <PostView {...data} />
+              </div>
+          </PageLayout>
     </>
   ); 
 };

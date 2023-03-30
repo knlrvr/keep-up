@@ -43,18 +43,18 @@ const ProfilePage: NextPage<{ username: string }> = ({username}) => {
         <meta name="description" content="" />
       </Head>
       <PageLayout>
-        <div className="bg-black h-36 relative">
-        <Link href="/">
+        <div className="bg-gradient-to-r from-blue-400 to-blue-100 h-36 relative">
+          <Link href="/">
             <BsArrowLeft 
               className="text-white text-3xl m-4 absolute hover:text-gray-300" />
-            </Link>
-            <Image 
-              src={data.profileImageUrl} 
-              alt={`${data.username ?? ""}'s profile picture`} 
-              width={148}
-              height={148}
-              className="-mb-20 absolute bottom-0 left-0 ml-6 rounded-full border-4 border-white"
-              />
+          </Link>
+          <Image 
+            src={data.profileImageUrl} 
+            alt={`${data.username ?? ""}'s profile picture`} 
+            width={148}
+            height={148}
+            className="-mb-20 absolute bottom-0 left-0 ml-6 rounded-full border-4 border-white"
+          />
         </div>
         <div className="h-[64px]"></div>
         <div className="flex p-4 px-14 text-xl font-bold">
