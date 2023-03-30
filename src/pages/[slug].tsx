@@ -57,7 +57,7 @@ const ProfilePage: NextPage<{ username: string }> = ({username}) => {
           />
         </div>
         <div className="h-[64px]"></div>
-        <div className="flex p-4 px-14 text-xl font-bold">
+        <div className="flex p-6 text-xl font-bold">
           @{data.username}
         </div>
         <div className="w-full border-b border-gray-200" />
