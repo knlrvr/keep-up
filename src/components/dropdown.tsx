@@ -20,8 +20,6 @@ const Dropdown = () => {
   const { isLoaded: userLoaded, isSignedIn, user } = useUser();
 
   if (!userLoaded) return <div />;
-  if (!user) return <div />;
-  if (!isSignedIn) return <div />;
 
   return (
     <>
@@ -33,7 +31,7 @@ const Dropdown = () => {
       {isExpanded && 
       <div className="bg-gray-200 rounded-l-xl rounded-br-lg absolute mt-4 right-0 w-36">
         <ul className="p-2 px-2 space-y-2 text-right">
-          {isSignedIn && (
+          {user && (
             <li className="hover:bg-gray-400 hover:text-white rounded px-2 p-1 cursor-pointer"
             >
               <Link href={`/${user.username}`}>
