@@ -20,6 +20,7 @@ const Dropdown = () => {
   const { isLoaded: userLoaded, isSignedIn, user } = useUser();
 
   if (!userLoaded) return <div />;
+  if (!user) return <div />;
 
   return (
     <>
