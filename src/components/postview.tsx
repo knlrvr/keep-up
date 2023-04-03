@@ -31,7 +31,7 @@ export const PostView = (props: PostWithUser) => {
 
   return (
     <>
-      <div key={post.id} className="py-4 px-4 border-b flex flex-col relative">
+      <div key={post.id} className="py-10 px-4 border-b flex flex-col relative">
         <div className="flex gap-5">
           <Image src={author.profileImageUrl} alt={`@${author.username}'s profile picture`}
             width="1000" height="0"
@@ -72,14 +72,14 @@ export const PostView = (props: PostWithUser) => {
 
         {/* add favorite/repost/share functionality here */}
 
-        <div className="flex mt-8 px-1 justify-between items-center">
+        {/* <div className="flex mt-8 px-1 justify-between items-center">
           <div className="flex justify-start space-x-24">
             <BsArrowRepeat 
               className="hover:text-blue-400 cursor-pointer text-lg" />
             <BsUpload 
               className="hover:text-gray-400 cursor-pointer" />
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

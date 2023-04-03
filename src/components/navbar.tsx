@@ -27,20 +27,20 @@ const Navbar = () => {
               <Dropdown />
             </div>
         </div>
-        <div className="p-2 flex justify-evenly items-start cursor-pointer">
+        <div className="p-2 flex justify-evenly items-start cursor-default">
           <div className="flex flex-col group transition duration-300">
-            <span className="group-hover:text-gray-500">Feed</span>
-            <span className="h-1 w-9 bg-blue-400 rounded-full group-hover:bg-blue-200 transition duration-300"></span>
+            <span className="">Feed</span>
+            <span className="h-1 w-9 bg-blue-400 rounded-full"></span>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center cursor-pointer">
             <span className="hover:text-gray-500">Following</span>
             <BsLock className="ml-1"/>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center cursor-pointer">
             <span className="hover:text-gray-500">For You</span>
             <BsLock className="ml-1"/>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center cursor-pointer">
             <span className="hover:text-gray-500">Trending</span>
             <BsLock className="ml-1"/>
           </div>
