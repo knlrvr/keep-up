@@ -37,10 +37,6 @@ const Navbar = () => {
             <BsLock className="ml-1"/>
           </div>
           <div className="flex items-center cursor-pointer">
-            <span className="hover:text-gray-500">For You</span>
-            <BsLock className="ml-1"/>
-          </div>
-          <div className="flex items-center cursor-pointer">
             <span className="hover:text-gray-500">Trending</span>
             <BsLock className="ml-1"/>
           </div>

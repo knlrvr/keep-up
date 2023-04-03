@@ -3,10 +3,10 @@ import Link from "next/link";
 import { useState } from 'react'
 
 import {
-  BsArrowRepeat, 
-  BsUpload,
   BsArrowDownSquare,
   BsArrowUpSquare,
+  BsArrowRepeat, 
+  BsUpload,
   BsChatLeft,
   BsBarChart,
   BsHeart

@@ -17,7 +17,7 @@ const SignOutButton = () => {
 
 const Dropdown = () => {
   const [isExpanded, setIsExpanded] = useState(false)
-  const { isLoaded: userLoaded, isSignedIn } = useUser();
+  const { isLoaded: userLoaded, isSignedIn, user } = useUser();
 
   if (!userLoaded) return <div />;
 
@@ -31,6 +31,14 @@ const Dropdown = () => {
       {isExpanded && 
       <div className="bg-gray-200 rounded-l-xl rounded-br-lg absolute mt-4 right-0 w-36">
         <ul className="p-2 px-2 space-y-2 text-right">
+          {isSignedIn && (
+            <li className="hover:bg-gray-400 hover:text-white rounded px-2 p-1 cursor-pointer"
+            >
+              <Link href={`/${user.username}`}>
+                My profile
+              </Link>
+            </li>
+          )}
           <li onClick={() => setIsExpanded(false)}
             className="hover:bg-gray-400 hover:text-white rounded px-2 p-1">
             <Link href="https://github.com/knlrvr" target="_blank"
