@@ -3,13 +3,13 @@ import Link from "next/link";
 import { useState } from 'react'
 
 import {
-  BsHeart, 
   BsArrowRepeat, 
-  BsChatLeft,
-  BsBarChart,
   BsUpload,
   BsArrowDownSquare,
-  BsArrowUpSquare
+  BsArrowUpSquare,
+  BsChatLeft,
+  BsBarChart,
+  BsHeart
 } from 'react-icons/bs'
 
 import type {  RouterOutputs } from "@/utils/api";
@@ -26,11 +26,11 @@ export const PostView = (props: PostWithUser) => {
   const { post, author } = props;
   const [count, setCount] = useState(0);
 
-  const { isLoaded: userLoaded, isSignedIn } = useUser();
+  const { isLoaded: isSignedIn } = useUser();
 
   return (
     <>
-      <div key={post.id} className="py-4 px-4 border-b flex flex-col relative">
+      <div key={post.id} className="py-10 px-4 border-b flex flex-col relative">
         <div className="flex gap-5">
           <Image src={author.profileImageUrl} alt={`@${author.username}'s profile picture`}
             width="1000" height="0"
@@ -59,7 +59,7 @@ export const PostView = (props: PostWithUser) => {
               <BsArrowUpSquare 
                 className="text-gray-500 hover:text-green-600 cursor-pointer" />
             </button>
-            <span className="text-sm font-thin">{count}</span>
+              <span className="text-sm font-thin">{count}</span>
             <button type='button'
               onClick={() => setCount((count) => count - 1)}>
               <BsArrowDownSquare 
@@ -70,16 +70,15 @@ export const PostView = (props: PostWithUser) => {
         </div>
 
         {/* add favorite/repost/share functionality here */}
-        {/* also a voting system */}
 
-        <div className="flex mt-8 px-1 justify-between items-center">
+        {/* <div className="flex mt-8 px-1 justify-between items-center">
           <div className="flex justify-start space-x-24">
             <BsArrowRepeat 
               className="hover:text-blue-400 cursor-pointer text-lg" />
             <BsUpload 
               className="hover:text-gray-400 cursor-pointer" />
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
