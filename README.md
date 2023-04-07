@@ -28,3 +28,6 @@ A full stack social media clone!
 
 ## Notes 
 > This is an ongoing project! If anyone comes across this, please post! 
+
+## Acknowledgments
+[Theo & his t3 tutorial](https://www.youtube.com/watch?v=YkOSUVzOAA4)
