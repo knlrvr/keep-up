@@ -34,7 +34,7 @@ const Dropdown = () => {
           {user !== null && (
             <li className="hover:bg-gray-400 hover:text-white rounded px-2 p-1 cursor-pointer"
             >
-              <Link href={`/${user.username}`}>
+              <Link href={`/${user.username || null}`}>
                 My profile
               </Link>
             </li>
