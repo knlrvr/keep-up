@@ -22,7 +22,7 @@ export const PostView = (props: PostWithUser) => {
   const { post, author } = props;
   const [count, setCount] = useState(0);
 
-  const { isLoaded: userLoaded, isSignedIn } = useUser();
+  const { isLoaded: isSignedIn } = useUser();
 
   return (
     <>
