@@ -26,7 +26,7 @@ const Navbar = () => {
                   </SignInButton>
                 </div>
               )}
-              {user !== null && (
+              {user && (
               <div>
                 <Link href={`/${user.username || null}`}>
                   <Image src={user.profileImageUrl} alt={`${user.username || null}'s profile picture`}
