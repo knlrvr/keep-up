@@ -28,7 +28,9 @@ const Navbar = () => {
               )}
               {user && (
               <div>
+                {/* eslint-disable-next-line @typescript-eslint/restrict-template-expressions */}
                 <Link href={`/${user?.username || null}`}>
+                  {/* eslint-disable-next-line @typescript-eslint/restrict-template-expressions */}
                   <Image src={user?.profileImageUrl} alt={`${user.username || null}'s profile picture`}
                     width="1000" height="0"
                     className="w-7 h-7 rounded-full mr-4"

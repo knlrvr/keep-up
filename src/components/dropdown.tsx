@@ -35,6 +35,7 @@ const Dropdown = () => {
             <li className="hover:bg-gray-400 hover:text-white rounded px-2 p-1 cursor-pointer"
             >
               <Link href={`/${user?.username}`}>
+                {/* eslint-disable-next-line @typescript-eslint/restrict-template-expressions */}
                 My profile
               </Link>
             </li>
