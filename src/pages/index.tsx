@@ -59,18 +59,19 @@ const CreatePostWizard = () => {
         }}
         disabled={isPosting}
       />
+
       {!isPosting && (
       <button onClick={() => mutate({ content: input})}
         className="px-6 rounded-full bg-blue-400 text-white hover:bg-blue-300 transition duration-300">
         Post
       </button>
       )}
-
       {isPosting && 
         <div className="flex items-center justify-center px-6 rounded-full bg-blue-400 text-white hover:bg-blue-300 transition duration-300">
           <span>Posting</span>
         </div>
       }
+      
     </div>
   )
 };

@@ -30,7 +30,7 @@ const SinglePostPage: NextPage<{ id: string }> = ({id}) => {
               <BsArrowLeft 
                 className="text-black text-3xl m-4 absolute hover:text-gray-300" />
             </Link>
-            <div className="h-screen flex justify-center items-center">
+              <div className="mt-12 md:mt-24">
                 <PostView {...data} />
               </div>
           </PageLayout>

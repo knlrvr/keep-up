@@ -12,7 +12,7 @@ const Navbar = () => {
   if (!userLoaded) return <div />;
 
   return (
-    <div className="fixed top-2 inset-x-0 bg-white bg-opacity-95 max-w-xl mx-auto border-x border-b border-gray-200 z-50">
+    <div className="fixed top-0 inset-x-0 bg-white bg-opacity-95 max-w-xl mx-auto border-x border-b border-gray-200 z-50">
         <div className="flex justify-between pt-4 py-8 items-center">
             <div className="text-xl font-semibold p-2 px-4">
                 <span className="font-thin">KeepUp </span>
@@ -41,7 +41,7 @@ const Navbar = () => {
               <Dropdown />
             </div>
         </div>
-        <div className="p-2 flex justify-evenly items-start cursor-default">
+        <div className="p-2 flex justify-evenly items-start cursor-default mb-1">
           <div className="flex flex-col group transition duration-300">
             <span className="">Feed</span>
             <span className="h-1 w-9 bg-blue-400 rounded-full"></span>
