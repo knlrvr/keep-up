@@ -4,15 +4,10 @@ import { useState } from 'react'
 
 import {
   BsArrowDownSquare,
-  BsArrowUpSquare,
-  BsArrowRepeat, 
-  BsUpload,
-  BsChatLeft,
-  BsBarChart,
-  BsHeart
+  BsArrowUpSquare
 } from 'react-icons/bs'
 
-import type {  RouterOutputs } from "@/utils/api";
+import type { RouterOutputs } from "@/utils/api";
 
 import dayjs from 'dayjs';
 
