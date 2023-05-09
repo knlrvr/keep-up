@@ -28,8 +28,8 @@ const Navbar = () => {
               )}
               {user && (
               <div>
-                <Link href={`/${user.username || null}`}>
-                  <Image src={user.profileImageUrl} alt={`${user.username || null}'s profile picture`}
+                <Link href={`/${user?.username || null}`}>
+                  <Image src={user?.profileImageUrl} alt={`${user.username || null}'s profile picture`}
                     width="1000" height="0"
                     className="w-7 h-7 rounded-full mr-4"
                   />
