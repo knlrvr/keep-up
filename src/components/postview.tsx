@@ -26,7 +26,7 @@ export const PostView = (props: PostWithUser) => {
 
   return (
     <>
-      <div key={post.id} className="py-10 px-4 border-b flex flex-col relative">
+      <div key={post.id} className="py-10 px-4 border-b flex flex-col">
         <div className="flex gap-5">
           <Image src={author.profileImageUrl} alt={`@${author.username}'s profile picture`}
             width="1000" height="0"
@@ -46,23 +46,10 @@ export const PostView = (props: PostWithUser) => {
                 </span>
               </Link>
             </div>
-            <span className="mt-1 mr-8">{post.content}</span>
+            <div className="overflow-hidden max-w-xl">
+              <span className="mt-1 mr-8 break-all">{post.content}</span>
+            </div>
           </div>
-          {isSignedIn && ( 
-          <div className="flex flex-col gap-1 absolute right-4 top-9 items-center">
-            <button type='button'
-              onClick={() => setCount((count) => count + 1)}>
-              <BsArrowUpSquare 
-                className="text-gray-500 hover:text-green-600 cursor-pointer" />
-            </button>
-              <span className="text-sm font-thin">{count}</span>
-            <button type='button'
-              onClick={() => setCount((count) => count - 1)}>
-              <BsArrowDownSquare 
-                className="text-gray-500 hover:text-red-600 cursor-pointer" />
-            </button>
-          </div>
-          )}
         </div>
 
         {/* add favorite/repost/share functionality here */}

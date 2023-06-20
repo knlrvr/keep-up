@@ -28,7 +28,7 @@ const SinglePostPage: NextPage<{ id: string }> = ({id}) => {
           <PageLayout>
             <Link href="/">
               <BsArrowLeft 
-                className="text-black text-3xl m-4 absolute hover:text-gray-300" />
+                className="text-black text-3xl m-4 absolute hover:-translate-x-1 transition duration-200" />
             </Link>
               <div className="mt-12 md:mt-24">
                 <PostView {...data} />

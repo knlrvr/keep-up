@@ -39,25 +39,28 @@ const ProfilePage: NextPage<{ username: string }> = ({username}) => {
   return (
     <>
       <Head>
-        <title>{data.username}</title>
+        <title>{data.username} | KeepUp</title>
         <meta name="description" content="" />
       </Head>
       <PageLayout>
         <div className="bg-gradient-to-r from-blue-400 to-blue-100 h-36 relative">
           <Link href="/">
             <BsArrowLeft 
-              className="text-white text-3xl m-4 absolute hover:text-gray-300" />
+              className="text-white text-3xl m-4 absolute hover:-translate-x-1 transition duration-200" />
           </Link>
           <Image 
             src={data.profileImageUrl} 
             alt={`${data.username ?? ""}'s profile picture`} 
             width={148}
             height={148}
-            className="-mb-20 absolute bottom-0 left-0 ml-6 rounded-full border-4 border-white"
+            className="-mb-20 absolute bottom-0 left-0 ml-4 rounded-full border-4 border-white"
           />
         </div>
-        <div className="h-[64px]"></div>
-        <div className="flex p-6 text-xl font-bold">
+        <div className="flex justify-end px-4 py-2">
+          {/* post count here */}
+        </div>
+        <div className="h-[44px]"></div>
+        <div className="flex px-4 py-8 text-3xl font-bold">
           @{data.username}
         </div>
         <div className="w-full border-b border-gray-200" />
