@@ -4,6 +4,6 @@
 
 body {
     @apply bg-white text-gray-800;
-    overscroll-behavior: none;
+    overscroll-behavior: none !important;
 }
 
