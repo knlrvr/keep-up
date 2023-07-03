@@ -7,7 +7,7 @@
 ![profile-notes](https://user-images.githubusercontent.com/91632194/228708843-78d1269a-b521-4b9f-bdcb-c57d46394eb7.png)
 
 ## Description
-A full stack social media clone!
+A full stack social media clone! 
 
 ## View
 [View Live](https://next-notes-74lh.vercel.app/)
