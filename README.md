@@ -4,6 +4,7 @@
 
 ## Table of Contents
 - [Description](#description)
+- [Purpose](#purpose)
 - [View](#view)
 - [Built With](#built-with)
 - [Running This Project Yourself ](#running-this-project-yourself)
@@ -13,7 +14,11 @@
 
 <a name="description"></a>
 ## Description
-A full stack social media clone! 
+A full stack social media clone! Users can post 'notes' between 1 and 240 characters. Users each have profile pages that will display all of the notes they've created. 
+
+<a name="purpose"></a>
+## Purpose
+In creating this application, I learned a lot about different approaches to building full stack applications. Building with T3 was so much fun that I went ahead and did it again. You can find that project and all of it's information [here](https://github.com/knlrvr/ttrpg-char-stats-v2). 
 
 <a name="view"></a>
 ## View
@@ -21,12 +26,20 @@ A full stack social media clone!
 
 <a name="built-with"></a>
 ## Built With
-- [TypeScript](https://www.typescriptlang.org/)
-- [Next](https://nextjs.org/docs)
-- [Tailwind](https://tailwindcss.com/docs/installation)
-- [Prisma](https://www.prisma.io/)
-- [tRPC](https://trpc.io/docs/quickstart)
-- [Clerk](https://clerk.com/)
+[![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+
+[![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
+
+[![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+
+[![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/docs/installation)
+
+[![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)](https://www.prisma.io/)
+
+[![tRPC](https://img.shields.io/badge/trpc-blue.svg?style=for-the-badge&logoColor=white)](https://trpc.io/docs/quickstart)
+
+[![Clerk](https://img.shields.io/badge/Clerk-8A2BE2?style=for-the-badge&logoColor=white)](https://clerk.com/)
+
 
 <a name="running-this-project-yourself"></a>
 ## Running This Project Yourself 
@@ -37,7 +50,7 @@ A full stack social media clone!
 
 <a name="notes"></a>
 ## Notes 
-> This is an ongoing project! If anyone comes across this, please post!
+> This is an ongoing project! If anyone comes across this, please post a note!
 >
 
 <a name="gallery"></a>
