@@ -26,19 +26,7 @@ In creating this application, I learned a lot about different approaches to buil
 
 <a name="built-with"></a>
 ## Built With
-[![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-
-[![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
-
-[![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
-
-[![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/docs/installation)
-
-[![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)](https://www.prisma.io/)
-
-[![tRPC](https://img.shields.io/badge/trpc-blue.svg?style=for-the-badge&logoColor=white)](https://trpc.io/docs/quickstart)
-
-[![Clerk](https://img.shields.io/badge/Clerk-8A2BE2?style=for-the-badge&logoColor=white)](https://clerk.com/)
+[![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/) [![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/) [![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/) [![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/docs/installation) [![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)](https://www.prisma.io/) [![tRPC](https://img.shields.io/badge/trpc-blue.svg?style=for-the-badge&logoColor=white)](https://trpc.io/docs/quickstart) [![Clerk](https://img.shields.io/badge/Clerk-8A2BE2?style=for-the-badge&logoColor=white)](https://clerk.com/)
 
 
 <a name="running-this-project-yourself"></a>
