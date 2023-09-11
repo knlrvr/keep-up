@@ -14,7 +14,7 @@
 
 <a name="description"></a>
 ## Description
-A full stack social media clone! Users can post 'notes' between 1 and 240 characters. Users each have profile pages that will display all of the notes they've created. 
+KeepUp is a full stack social media app. With seamless GitHub login integration through Clerk, users can easily access the platform. KeepUp allows users to post 'notes' ranging from 1 to 240 characters. This flexibility enables users to express themselves concisely while still capturing the essence of their message, fostering a dynamic and engaging environment within the platform.
 
 <a name="purpose"></a>
 ## Purpose
