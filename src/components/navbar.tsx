@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { BsLock } from 'react-icons/bs'
-import { SignInButton, useUser } from '@clerk/nextjs'
+import { BsBoxArrowLeft, BsLock } from 'react-icons/bs'
+import { SignInButton, SignOutButton, useUser } from '@clerk/nextjs'
 
 import Dropdown from './dropdown'
 
@@ -26,6 +26,14 @@ const Navbar = () => {
                   </SignInButton>
                 </div>
               )}
+
+              {isSignedIn && (
+              <div className="mr-4 text-sm px-4 py-1 rounded-full  transition duration-300 border border-[#222]">
+                <SignOutButton> 
+                  Sign Out                  
+                </SignOutButton>
+              </div>
+              )}
               {user && (
               <div>
                 {/* eslint-disable-next-line @typescript-eslint/restrict-template-expressions */}
@@ -38,7 +46,7 @@ const Navbar = () => {
                 </Link>
               </div> 
               )}
-              <Dropdown />
+              {/* <Dropdown /> */}
             </div>
         </div>
         <div className="p-2 flex justify-evenly items-start cursor-default mb-1">
