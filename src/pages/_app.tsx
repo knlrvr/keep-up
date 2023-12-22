@@ -11,7 +11,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <ClerkProvider {...pageProps}>
       <Head>
-        <title>NEXT.js NOTES</title>
+        <title>KeepUp</title>
         <meta name="description" content="Leave a note!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

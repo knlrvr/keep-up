@@ -43,11 +43,11 @@ const Dropdown = () => {
           <li onClick={() => setIsExpanded(false)}
             className="hover:bg-gray-400 hover:text-white rounded px-2 p-1">
             <Link href="https://github.com/knlrvr" target="_blank"
-                className="">
+                className="w-full">
                 Learn More
             </Link>
           </li>
-          {isSignedIn && (
+          {/* {isSignedIn && (
             <li className="hover:bg-gray-400 hover:text-white rounded px-2 p-1 cursor-pointer"
             >
                 <SignOutButton />
@@ -60,7 +60,7 @@ const Dropdown = () => {
                     Sign In
                 </SignInButton>
             </li>
-          )}
+          )} */}
         </ul>
       </div>
     }

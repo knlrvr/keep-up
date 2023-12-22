@@ -44,7 +44,7 @@ const CreatePostWizard = () => {
         className="w-12 h-12 rounded-full"
       />
       <input 
-        className="bg-transparent px-1 rounded-full w-full grow outline-none"
+        className="bg-transparent px-1 rounded-full w-full grow outline-none placeholder:text-neutral-500 text-sm"
         placeholder="Add a note here!"
         type="text"
         value={input}

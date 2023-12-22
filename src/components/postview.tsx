@@ -41,13 +41,13 @@ export const PostView = (props: PostWithUser) => {
               &nbsp; · &nbsp; 
               <Link href={`/post/${post.id}`}
                 className="hover:underline hover:underline-offset-4 hover:text-gray-300">
-                <span className="font-thin">
+                <span className="font-light tracking-wide text-xs">
                   {`${dayjs(post.createdAt).fromNow()}`}
                 </span>
               </Link>
             </div>
-            <div className="overflow-hidden max-w-xl">
-              <span className="mt-1 mr-8 break-all">{post.content}</span>
+            <div className="overflow-hidden md:pr-4">
+              <span className="mt-1 mr-8 break-keep">{post.content}</span>
             </div>
           </div>
         </div>
